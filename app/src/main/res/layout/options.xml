@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60px">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Options"
+        android:id="@+id/textView"
+        android:layout_marginBottom="20px" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="12"
+        android:columnCount="5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="NETWORK"
+            android:id="@+id/textView2"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <Spinner
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/net_interface_spinner"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/interface_address"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:editable="false"
+            android:enabled="false"
+            android:focusable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="TARGET"
+            android:id="@+id/textView3"
+            android:layout_row="3"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="MAC Address"
+            android:id="@+id/textView5"
+            android:layout_row="4"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mac_address"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:hint="00:00:00:00:00:00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Hostname/IP Address"
+            android:id="@+id/textView6"
+            android:layout_row="5"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ip_address"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:hint="192.168.1.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="SSH"
+            android:id="@+id/textView4"
+            android:layout_row="6"
+            android:layout_column="1" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:id="@+id/ssh_auth_password"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:checked="true"
+                android:onClick="onShowPasswordFields" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publickey"
+                android:id="@+id/ssh_auth_public_key"
+                android:layout_row="6"
+                android:layout_column="3"
+                android:checked="false"
+                android:onClick="onShowPublicKeyField" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Username"
+            android:id="@+id/ssh_username_label"
+            android:layout_row="7"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Password"
+            android:id="@+id/ssh_password_label"
+            android:layout_row="8"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ssh_username"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:text="arron" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ssh_password"
+            android:layout_row="8"
+            android:layout_column="2"
+            android:password="true"
+            android:text="Altura5iesta!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public Key Path"
+            android:id="@+id/ssh_public_key_label"
+            android:layout_row="9"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ssh_public_key_path"
+            android:layout_row="9"
+            android:layout_column="2" />
+
+    </GridLayout>
+</LinearLayout>
